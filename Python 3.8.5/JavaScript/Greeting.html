@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Greeting/Wishings</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var today = new Date
+        var timeinput = today.getHours()
+        document.write(today.getHours())
+        if (timeinput < 12){
+        alert("Good Morning")}
+        else if (timeinput<16){
+            alert("Good Afternoon")
+        }
+        
+        else if (timeinput<20){
+            alert("Good Evening")
+        }
+        else{
+            alert("Good Night")
+        }
+        </script>
+    </body>
+</html>

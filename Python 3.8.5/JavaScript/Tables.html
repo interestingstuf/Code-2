@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Tables Of 6</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <script type="text/javascript">
+        var d=prompt("How much table count in the table of 6 would you like to go up in")
+        var r=prompt("What table", "Here")
+        var c=prompt("What color")
+        var bg=prompt("What background color")
+        document.write("table of","<br>",r,"<br>")
+        i=0
+        
+        while(i<d){
+            i++
+            //document.write("hi")
+          
+            document.bgColor=bg
+            document.fgColor=c
+            document.write(r,"x",i,"= ",i*r, "<br>")
+        }
+        
+        //document.write("i*6")
+        document.getElementById("h1").innerHTML="The table of "+(r)
+        
+    </script>
+</body>
+</html>

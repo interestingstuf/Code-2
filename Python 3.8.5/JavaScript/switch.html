@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>switch system</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+               var d=new Date(prompt("Enter Your DOB (eg: November 17, 2001)", "Month DD, YYYY"))
+               //document.write(d)
+               var xy=d.getDay()
+               document.write(xy, "<br>")
+               switch(xy)
+               {
+                case 0:
+                    document.write("You were born on <b>Sunday</b>")
+                    break
+
+                case 1:
+                document.write("You were born on <b>Monday</b>")
+                break
+
+                case 2:
+                    document.write("You were born on <b>Tuesday</b>")
+                    break
+                case 3:
+                    document.write("You were born on <b>Wensday</b>")
+                    break
+                case 4:
+                document.write("You were born on <b>Thrusdau</b>")
+                break
+                case 5:
+                    document.write("You were born on <b>Friday</b>")
+                    break
+                case 6:
+                document.write("You were born on <b>Saturday</b>")
+                break
+                default:
+                    document.write("Please Input A Valid Date In The Listed Format Example Above")
+
+                   
+               }
+
+                
+
+        </script>
+    </body>
+</html>

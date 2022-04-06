@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>Simulator Java</title>
+        <style type="text/css">
+         *{
+             padding: 0;
+             margin: 0;
+             box-sizing: border-box;
+             
+         }
+         body{
+             background-image:url(MS.gif);
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: top;
+             font-family: Georgia, 'Times New Roman', Times, serif;
+         }
+         .menubar{
+             background:transparent;
+             text-align: center;
+
+         }
+         .menubar ul{
+             display: inline-flex;
+             list-style: none;
+             
+         }
+         .menubar ul li{
+             width: 225px;
+             margin: 10px;
+             padding: 5px;
+             
+
+
+         }
+         .menubar ul li a{
+             text-decoration: none;
+             color: snow;
+             
+         }
+         .menubar ul li:hover{
+             background:darkred;
+             padding: 5px;
+         }
+         .Submenu1{
+            display: none;
+            background: transparent;
+            position: absolute;
+            padding: 1px;
+            margin-top:5px ;
+            margin-left: 5px;
+         }
+         .menubar ul li:hover .Submenu1{
+             display: block;
+
+         }
+         .menubar ul li:hover .Submenu1 ul{
+             display: block;
+             min-width: 10px;
+             font-size: 14px;
+             margin: 0px;
+             
+         }
+         .menubar ul li:hover .Submenu1 ul li{
+             width: 150px;
+             padding:5px;
+             border-bottom: 1px dotted white;
+             text-align: left;
+             border-radius:  0px;
+             background: transparent;
+         }
+         .menubar ul li:hover .Submenu1 ul li a:hover{
+             color: red;
+         }
+         .Submenu2{
+             display: none;
+             background: transparent;
+             position:absolute;
+             margin-top:-33px ;
+             margin-left: 150;
+
+         }
+         .hoverme:hover .Submenu2{
+             display: block;
+         }
+         #slides{
+             position: absolute;
+             top: 250px;
+             left: 10px;
+             height: 300px;
+             padding: 3px;
+             margin: 0px;
+             list-style-type: none;
+             
+         }
+         .slide{
+             position: absolute;
+             left: 0px;
+             top: 20px;
+             width: 100%;
+             height: 100%;
+             opacity: 0;
+             z-index: 1;
+             -webkit-transition:opacity 1s ;
+             -moz-transition: opacity 1s;
+             -o-transition: opacity 1s;
+             transition: opacity 1s;
+
+         }
+         .showing{
+             opacity: .7;
+             z-index: 2;
+         }
+         .controls{
+             
+             position:relative;
+             top:520px;left:13px;
+             border: snow;
+             background: black;
+             /*color: red;*/
+
+             
+             
+         }
+         .controls label{
+             color: snow;
+             
+             padding: 45px;
+             margin: 45px;
+         }
+
+
+         
+        </style>
+    </head>
+    <body>
+
+        <div class="menubar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Flight Simulators</a>
+                <div class="Submenu1">
+                    <ul>
+                        <li class="hoverme"><a href="MSFSPage.html">Microsoft Flight Simulator</a>
+                            <div class="Submenu2">
+                                <ul>
+                                    <li><a href="#">Airbus A380</a></li>
+                                    <li><a href="#">Boeing 737 Max</a></li>
+                                    <li><a href="#">Airbus A320</a></li>
+                                    <li><a href="#">Boeing 747</a></li>
+                                </ul>
+                            
+                            </div>
+                        </li>
+                        <li><a href="#">X-Plane 11</a></li>
+                        <li><a href="#">FlightGear</a></li>
+                        <li><a href="#">Acro Flight Simulator</a></li>
+                    </ul>
+                
+                </div>
+                </li>
+                <li><a href="#">Space Simulators</a>
+                    <div class="Submenu1">
+                        <ul>
+                            <li><a href="#">Star Trek Online</a>
+                               
+                            </li>
+                            <li><a href="#">Star Conflict</a></li>
+                            <li class="hoverme"><a href="#">Eve Online</a>
+                                <div class="Submenu2">
+                                    <ul>
+                                        <li><a href="#">Bowhead</a></li>
+                                        <li><a href="#">Brutix</a></li>
+                                        <li><a href="#">Breacher</a></li>
+                                        <li><a href="#">Broadsword</a></li>
+                                    </ul>
+                                
+                                </div></li>
+                            </li>
+                            <li><a href="#">No Man's Sky</a></li>
+                        </ul>
+                    
+                    </div></li>
+                <li><a href="#">Robotic Simulators</a>
+                    <div class="Submenu1">
+                        <ul>
+                            <li><a href="#">RoboDK</a></li>
+                            <li><a href="#">ABB RoboStudio</a></li>
+                            <li><a href="#">Microsoft Robotics Developer Studio</a></li>
+                            <li><a href="#">Robotics Virtual Worlds</a></li>
+                        </ul>
+                    
+                    </div></li>
+                <li><a href="#">Contact Us</a></li>
+            
+            </ul>
+        </div>
+
+        <ul id="slides">
+            
+            <li class="slide showing"><img src="cockpit.jpeg" width="600" height="300"></li>
+            <li class="slide"><img src="propplane.jpeg" width="600" height="300"></li>
+            <li class="slide"><img src="Pushback.jpeg" width="600" height="300"></li>
+            <li class="slide"><img src="787GourmetLoadoing.jpeg" width="600" height="300"></li>
+        </ul>
+        
+        <script type="text/javascript">
+        var slides =document.querySelectorAll("#slides .slide")
+        var currentslide=0
+        var slideinterval=setInterval(nextslide, 2000)
+        function nextslide(){
+            gotoslide(currentslide+1)
+        }
+        function previousslide(){
+            gotoslide(currentslide-1)
+        }
+        function gotoslide(n){
+            slides[currentslide].className="slide"
+            currentslide=(n+slides.length)%slides.length
+            slides[currentslide].className="slide showing"
+
+        }
+        var playing=true
+        var paused=document.getElementById("pause")
+        function pauseslideshow(){
+            playing=false
+            clearInterval(slideinterval)
+
+        }
+        function playslideshow(){
+            playing=true
+            slideinterval=setInterval(nextslide,2000)
+        }
+        function plpause(){
+            if (playing){
+                pauseslideshow()
+            }
+            else{
+                playslideshow()
+            }
+
+        }
+
+        </script>
+        
+        <button class="controls" id="previous" onclick="previousslide()"><label><<</label></button>
+        <button class="controls" id="pause" onclick="plpause()"><label>>/||</label></button>
+        <button class="controls" id="next" onclick="nextslide()"><label>>></label></button>
+    </body>
+</html>

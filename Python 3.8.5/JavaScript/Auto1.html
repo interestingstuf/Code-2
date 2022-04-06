@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Auto 1</title>
+        <style type="text/css">
+         .blink{
+             animation: blinker 1s linear infinite;
+             
+             
+         }
+         .red{
+            background-color: red;
+             margin: 0;
+             width: 1000px;
+             height: 50px ;
+             font-size: x-large;
+
+         }
+         @keyframes blinker{
+             50%{
+                 opacity: 0
+                 ;
+             }
+         }
+        
+       
+        </style>
+        
+    </head>
+    <body background="black">
+
+        
+        <div class="red">
+            <marquee direction="Right" class="blink">Recent News: The News Is Parth Is Awesome It is very important do not forget :)</marquee>
+
+        </div>
+        <h1 id="A1" ></h1>
+        
+        <script type="text/javascript">
+        var i=0
+        var text="Hi This Is Parth Here And You Are Seeing A Small Magic Hope You Will Enjoy this Magic"
+        var speed=100
+        function abc(){
+            if (i<text.length){
+                document.getElementById("A1").innerHTML+=text.charAt(i)
+                i++
+                setTimeout(abc,speed) 
+            }
+            
+        }
+        //abc()
+        </script>
+        <button onclick="abc()">CLICK ME to see magic show</button>
+
+    </body>
+</html>

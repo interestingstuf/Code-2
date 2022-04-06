@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>switch system</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+               var d=new Date(prompt("Enter Your DOB (eg: November 17, 2001)", "Month DD, YYYY"))
+               //document.write(d)
+               var xy=d.getDay()
+               document.write(xy, "<br>")
+              if (xy == 0)
+              {
+                document.write("Sunday")
+              }
+              else if (xy == 1){
+                  document.write("Monday")
+              }
+              else if (xy == 2){
+                  document.write("Tuesday")
+              }
+              else if (xy == 3){
+                  document.write("Wensday")
+              }
+              else if (xy == 4){
+                  document.write("Thrusday")
+              }
+              else if (xy == 5){
+                  document.write("Friday")
+              }
+              else if (xy == 6){
+                  document.write("Saturday")
+              }
+              else{
+                  document.write("Invalid Date: Check If Date Is In Listed Format")
+              }
+
+                   
+               
+
+                
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>While Loop</title>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+        document.write("<h1>Table Of 2</h1>")
+        var i=0
+        
+        while (i<3){
+       if (i == 0){
+        
+           
+           document.bgColor="green"
+       }  
+       else if(i==1) {
+           function one(){
+               document.bgColor="red"
+               const mytimeout=setTimeout(one, 5000)
+           }
+       }
+        else if(i==2) {
+        function two(){
+            document.bgColor="yellow"
+        }
+    }
+        
+        const mytimeout1=setTimeout(two, 5000) 
+        document.write(i)
+        i++
+       
+       }
+        document.write(i)
+        
+        
+        
+        </script>
+       
+        
+    </body>
+</html>

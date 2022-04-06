@@ -1,0 +1,19 @@
+<html>
+    <head>  
+        <title>With Practice</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var area, circumference, radius
+        radius=10 
+        with(Math){
+            area=PI*pow(radius,2)
+            circumference=2*PI*radius
+        }
+        with(document){
+            write("Area Of Circle With Radius Of 10", area, "<br>")
+            write("Circumference Of Circle With Radius Of 10", circumference, "<br>")
+        }
+        </script>
+    </body>
+</html>
