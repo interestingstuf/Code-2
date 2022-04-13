@@ -30,14 +30,17 @@ def getpdf(request):
    response=HttpResponse(path,content_type=mime_type)
    return response
 def uploading1(request):
+   
    if request.method=="POST":
       student=formupload(request.POST,request.FILES)
-      if student.isvalid():
-         handle_uploaded_file(request.FILES["File"] )
+      if student.is_valid():
+         handle_uploaded_file(request.FILES["file"] )
          return HttpResponse("File Uploaded Succesfully")
    else:
+      
       student=formupload()
    return render(request,"parth_app/Downloadpdf.html",{"form":student})
+   
 
 
 def downloadpdfs(request):
