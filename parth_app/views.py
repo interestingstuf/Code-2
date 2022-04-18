@@ -1,10 +1,12 @@
 from importlib.resources import path
 import mimetypes
+import re
 
 from unittest.mock import patch
 from django.shortcuts import render
 from django.http import HttpResponse, response
-from .forms import formupload
+from django.template import context
+from .forms import formcontactform, formupload
 from .functions import handle_uploaded_file
 # Create your views here.
 def home(request):
@@ -47,6 +49,19 @@ def downloadpdfs(request):
    return render(request, "parth_app/Downloadpdf.html")       
 def contact(request):
    return render(request, "parth_app/Contactme.html")           
+
+
+
+
+from .forms import formcontactform
+
+def formshow(request):
+   form=formcontactform(request.POST or None)
+   if form.is_valid():
+      form.save()
+   context={"form":form}
+   return render(request,"parth_app/contactform1.html",context)    
+
 
       
            

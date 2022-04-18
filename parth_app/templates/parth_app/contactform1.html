@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Contact Form</title>
+    </head>
+    <Body>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <label for="fullname" >Full Name</label>
+            <input type="text" name="fullname" value="">
+            <label for="email">E-Mail</label>
+            <input type="text" name="email" value="">
+            <label for="contact">contact</label>
+            <input type="text" name="contact" value="">
+            <label for="message">message</label>
+            <input type="text" name="message" value="">
+            <button type="submit">Submit</button>
+        </form>
+
+    </Body>
+</html>

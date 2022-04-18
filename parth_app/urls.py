@@ -13,6 +13,7 @@ path("downloads/", views.downloadpdfs, name="DWN"),
 path("pdf1/", views.getpdf, name="PDF1"),
 path("upload/", views.uploading1, name="UP1"),
 path("contact/", views.uploading1, name="CON"),
+path("contactFORM/", views.formshow, name="CONFOR"),
 
 
 

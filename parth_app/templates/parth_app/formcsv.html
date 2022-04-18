@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Data To Csv</title>
+        <script type="text/javascript">
+        function csvfile(){
+            csvdata=new Array()
+            csvdata[0]=document.getElementById("firstname").value
+            csvdata[1]=document.getElementById("middlename").value
+            csvdata[2]=document.getElementById("lastname").value
+            window.open("data:text/csv;charset=utf-8,"+csvdata.join(","))
+            clearData()
+            alert("Data Added Succesfully")
+
+        }
+        function clearData(){
+            document.getElementById("firstname").value=""
+            document.getElementById("middlename").value=""
+            document.getElementById("lastname").value=""
+            
+
+        }
+        
+
+        </script>
+    </head>
+    <body>
+        <p>
+            First Name: <input type="text" id="firstname"><br>
+            Middle Name: <input type="text"  id="middlename"><br>
+            Last Name: <input type="text" id="lastname"><br>
+            <input type="button" id="addbutton" value="generatecsv" onClick="javascript:csvfile()">
+
+
+        </p>
+    </body>
+</html>
