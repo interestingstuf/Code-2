@@ -9,3 +9,4 @@ class contactform1(models.Model):
     email=models.EmailField()
     contact=models.CharField(max_length=15)
     message=models.CharField(max_length=200)
+    
