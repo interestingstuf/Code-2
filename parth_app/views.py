@@ -8,6 +8,7 @@ from django.http import HttpResponse, response
 from django.template import context
 from .forms import formcontactform, formupload
 from .functions import handle_uploaded_file
+from .models import contactform1
 # Create your views here.
 def home(request):
     return HttpResponse("Hi There This Is Parth Here And you Are Seeing The Parth Website")
@@ -61,6 +62,9 @@ def formshow(request):
       form.save()
    context={"form":form}
    return render(request,"parth_app/contactform1.html",context)    
+def view1(request):
+   st=contactform1.objects.all()
+   return render(request,"parth_app/Displaydata.html",{"st":st})
 
 
       
