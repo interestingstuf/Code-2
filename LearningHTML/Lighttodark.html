@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Light To Dark Page</title>
+        <style type="text/css">
+        .delay1{
+            animation:fading ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            font-size: 50;
+
+        } 
+        .delay{
+            animation:fading ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            font-size: 60px;
+
+        }
+        @keyframes fading{
+            0%{
+                opacity: 0;
+                
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+        
+        <h1 id="a1" class="delay"></h1>
+        <h1 id="a2" class="delay1"></h1>
+
+
+        <script type="text/javascript">
+        var speed=5000
+        function print1(){
+            document.getElementById("a1").innerHTML="Introduction"
+            setTimeout(print1,speed)
+        }
+        function print2(){
+            document.getElementById("a2").innerHTML="First Topic"
+            print1()
+            
+        }
+        
+        
+        print2()
+        </script>    
+    </body>
+</html>

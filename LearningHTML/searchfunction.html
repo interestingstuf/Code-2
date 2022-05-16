@@ -1,0 +1,90 @@
+<html>
+    <head>  
+        <title>
+            Search function
+        </title>
+        <style type="text/css">
+        *{
+            box-sizing: border-box; 
+
+        }
+        #input1{
+            background-image:url("searchicon.jpeg");
+            background-position:0px 5px ;
+            background-repeat: no-repeat;
+            width: 20%;
+            background-size: 20px;
+            font-size: 16px;
+            padding: 6px 10px 6px 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+        #ul1{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #ul1 li a{
+            border: 1px solid #ddd;
+            text-decoration: none;
+            margin-top: -1px;
+            background-color:#f6f6f6 ;
+            padding: 12px;
+            font-size: 18px;
+            color: black;
+            display: block;
+
+        }
+        #ul1 li a:hover:not(.header){
+            background-color: #eee;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <input type="text" id="input1" placeholder="search for names..."  title="Type A Name Here: " onkeyup="search()">
+    
+    <ul id="ul1">
+        <li><a href="#">Foods</a></li>
+        <li><a href="#">Medicine</a></li>
+        <li><a href="#">Natural Medicines</a></li>
+        <li><a href="#">Veggies</a></li>
+        <li><a href="#">Fresh</a></li>
+        <li><a href="#">Mother</a></li>
+        <li><a href="#">Nike</a></li>
+        <li><a href="#">Vegetable</a></li>
+        <li><a href="#">Mom</a></li>
+        
+
+        
+
+        
+
+
+
+    </ul>   
+    <script type="text/javascript">
+    function search(){
+        var input=document.getElementById("input1")
+        var upper=input.value.toUpperCase()
+        var list= document.getElementById("ul1")
+        var li=list.getElementsByTagName("li")
+        for (i=0;i<li.length;i++){
+            var a=li[i].getElementsByTagName("a")[0]
+            var value=a.textContent || a.innerText
+            if (value.toUpperCase().indexOf(upper)>-1){
+                li[i].style.display=""
+            }             
+            else{
+                li[i].style.display="none"
+            }
+            
+
+        }
+
+    }
+    
+    </script>     
+
+    </body>
+</html>
