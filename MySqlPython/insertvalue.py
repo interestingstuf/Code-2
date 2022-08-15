@@ -34,7 +34,7 @@ def f1():
     val=("Rohan", "838")
     cursor.execute(sql,val)
     mydb.commit()
-    myresult=cursor.fetchall()
+    myresult=cursor.fetchall()  
     for x in myresult:
         print(x)
     mydb.close()

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>OverEdits</title>
+        <style type="text/css">
+        .delay1{
+            animation:fading ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            font-size: 50;
+            
+            color: rgb(5, 135, 179);
+            
+        } 
+        .delay{
+            animation:fading ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            font-size: 60px;
+            position: absolute;
+
+        }
+        @keyframes fading{
+            0%{
+                opacity: 0;
+                
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .image1{
+            background-image: url("mclaren.jpg");
+        }
+
+        </style>
+    </head>
+    <body class="image1">
+        
+        <h1 id="a1" class="delay1"></h1>
+        
+        
+
+        <script type="text/javascript">
+        var speed=5000
+        function print1(){
+            document.getElementById("a1").innerHTML="Hi, I'm OverEdits"
+            setTimeout(print1,speed)
+        }
+
+        
+
+        
+        
+        print1()
+        
+        </script>    
+    </body>
+</html>
