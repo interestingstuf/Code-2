@@ -21,20 +21,20 @@ t3.grid(row=2,column=1)
 def f1():
     mydb=mysql.connector.connect(
     host="localhost",
-    database="testingabc",
-    user=t1.get(),
-    password=t2.get(),
-    
+    database="connection",
+    user="root",
+    password="tyu@3434",
+
 
     )
     cursor=mydb.cursor()
     print("Connection Successful")
     name=t3.get()
-    sql=("insert into defg (name,rolenumber) values (%s, %s) ")
-    val=("Rohan", "838")
+    sql=("insert into abc (NAME,ID) values (%s, %s) ")
+    val=("Rohan", "787")
     cursor.execute(sql,val)
     mydb.commit()
-    myresult=cursor.fetchall()  
+    myresult=cursor.fetchall()
     for x in myresult:
         print(x)
     mydb.close()
