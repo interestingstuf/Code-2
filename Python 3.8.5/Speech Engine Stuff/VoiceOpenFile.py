@@ -24,15 +24,25 @@ while True:
     quest = output
     Language = "en"
     
-    if quest == "Jarvis open Excel":
+    if quest == "open Excel":
         subprocess.check_call(["open", "-a", "Microsoft Excel"])
-    elif quest == "Jarvis open Discord":
-        subprocess.check_call(["open", "-a", "Discord"])
-    elif quest == "Jarvis open Google":
-        subprocess.check_call(["open", "-a", "Google Chrome"])
-    
-    else:
-        print("That App is Not Coded Into This Sytem")
+    elif quest == "open Terminal":
+        subprocess.check_call(["open", "-a", "Terminal"])
+    elif quest == "open clock":
+        subprocess.check_call(["open", "-a", "Clock"])   
+    elif quest == "open weather":
+        subprocess.check_call(["open", "-a", "Weather"])  
+    elif quest == "open clock":
+        subprocess.check_call(["open", "-a", "Clock"])     
+    elif quest == "open browser":
+        subprocess.check_call(["open", "-a", "Opera GX "])      
+    elif quest == "open app":
+        subprocess.check_call(["close", "-a", "Clock"])                
+    elif quest == "close":
         break
+    else:
+
+        print("That App is Not Coded Into This Sytem")
+    
 
     
