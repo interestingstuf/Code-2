@@ -1,13 +1,16 @@
+import os
+os.environ["KIVY_VIDEO"]="ffpyplayer" 
 from kivy.app import App
 from kivy.uix.video import Video
 from kivy.uix.videoplayer import VideoPlayer
-import os 
 import ffmpeg
-os.environ["KIVY_VIDEO"]="ffpyplayer"
+
 
 class Mainapp(App):
     def build(self):
-        v1=VideoPlayer(source="/Users/parthamradkar/Desktop/j.mp4")
+        v1=VideoPlayer(source="j.mp4")
+        v1.state="play"
+        
         
         
         return v1
