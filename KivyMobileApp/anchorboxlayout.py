@@ -10,7 +10,7 @@ class Mainapp(App):
         layout1.add_widget(b2)
         layout2=AnchorLayout(anchor_x="right",anchor_y="top")
         b3=Button(text="Bye",size_hint=(.3,.3))
-        layout2.add_widget(b2)
+        layout2.add_widget(b3)
         
 
        
