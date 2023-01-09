@@ -1,0 +1,31 @@
+#:kivy 2.1.0
+
+<MyGrid>:
+    uid:uid
+    pwd:pwd
+
+    GridLayout:
+        cols:1
+        size:root.width-200,root.height-200
+        pos:100,100
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text:"User ID"
+
+            TextInput:
+                id:uid
+                multiline:False
+            Label:
+                text:"Password"
+
+            TextInput:
+                id:pwd
+                multiline:False
+        Button:
+            text:"Login"
+            on_press:root.login()            
+        
+
